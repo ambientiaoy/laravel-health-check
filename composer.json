@@ -1,0 +1,26 @@
+{
+    "name": "ambientia/health-check",
+    "description": "Adds Liveness and Readiness Probes in the Laravel application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matti Teräslahti",
+            "email": "matti.teraslahti@ambientia.fi"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ambientia\\HealthCheck\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ambientia\\HealthCheck\\HealthCheckServiceProvider"
+            ]
+        }
+    }
+}
