@@ -1,23 +1,23 @@
 # Health Check for Laravel
-## Installation
-1. Copy the package contents to your Laravel app root in `packages/ambientia/health-check` directory.
-2. Edit the Laravel app's `composer.json` file's autoload section:
-```
-     "autoload": {
-         "psr-4": {
-            "App\\": "app/"
-+            "Ambientia\\HealthCheck\\": "packages/ambientia/health-check/src"
-         },
-```
-3. Run `composer dump-autoload` in the app root
-4. Edit `config/app.php`, add the service provider
-```
-         /*
-          * Package Service Providers...
-          */
-+        Ambientia\HealthCheck\HealthCheckServiceProvider::class,
 
+## Installation for development in a Laravel project
+1. Clone this repository outside of your Laravel project directory
+2. Edit the Laravel project's `composer.json` repositories section:
 ```
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../health-check",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+```
+3. Run `composer update` in the app root
+
+Now you have a symlink in `vendor/ambientia/health-check` that points to the original directory that you cloned in step 1.
+
 ## Using the health checks
 You can set your monitoring system to ping the liveness and readiness URLs to get alerted if there are any problems.\
 In Kubernetes and OpenShift you can use the probes also for container health checks.
