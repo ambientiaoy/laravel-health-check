@@ -1,7 +1,7 @@
 # Health Check for Laravel
 
 ## Installation in a Laravel project
-2. Edit the Laravel project's `composer.json` repositories section:
+1. Edit the Laravel project's `composer.json` repositories section:
 ```
     "repositories": [
         {
@@ -10,7 +10,7 @@
         }
     ],
 ```
-3. Run `composer require ambientia/health-check` in the app root
+2. Run `composer require ambientia/health-check` in the app root
 
 ## Installation for development in a Laravel project
 1. Clone this repository outside of your Laravel project directory
