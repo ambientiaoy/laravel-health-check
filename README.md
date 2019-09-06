@@ -1,5 +1,17 @@
 # Health Check for Laravel
 
+## Installation in a Laravel project
+2. Edit the Laravel project's `composer.json` repositories section:
+```
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:ambientiaoy/laravel-health-check.git"
+        }
+    ],
+```
+3. Run `composer require ambientia/health-check` in the app root
+
 ## Installation for development in a Laravel project
 1. Clone this repository outside of your Laravel project directory
 2. Edit the Laravel project's `composer.json` repositories section:
